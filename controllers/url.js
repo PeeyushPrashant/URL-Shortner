@@ -11,6 +11,7 @@ export const handleCreateUrlShortnerId = async (req, res) => {
       shortId: shortId,
       redirectUrl: body.url,
       visitHistory: [],
+      userId: req.user._id,
     });
     return res.status(200).json({ shortId: shortId });
   } catch (error) {
